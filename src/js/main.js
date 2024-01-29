@@ -1,27 +1,22 @@
-// main.js
-const user = require('./user'); 
-
-// crear y almacenar usuarios
+const user = require('./user');
 const usuarios = [
     new user("juan", "juan@example.com", "123"),
     new user("maria", "maria@example.com", "456"),
     new user("otto", "otto@example.com", "789"),
-    
 ];
 
-
-// Imprimir la lista de usuarios
 console.log("Lista de usuarios:", usuarios);
 
-const uss = "juan";
-const pss = '123';
+function log() {
+    const uss = document.getElementById('txtUser').value;
+    const pss = document.getElementById('txtPass').value;
+    console.log("Lista de usuarios:", usuarios);
+    const usuarioEncontrado = usuarios.find(user => user.getUser() === uss);
 
-// Buscar el usuario en la lista
-const usuarioEncontrado = usuarios.find(user => user.getUser() === uss);
-
-if (usuarioEncontrado && usuarioEncontrado.validateLogin(uss, pss)) {
-    console.log("Inicio de sesión exitoso");
-} else {
-    console.log("Credenciales incorrectas");
+    if (usuarioEncontrado && usuarioEncontrado.validateLogin(uss, pss)) {
+        console.log("Inicio de sesión exitoso");
+        window.location.href = './src/html/principal.html';
+    } else {
+        console.log("Credenciales incorrectas");
+    }
 }
-
