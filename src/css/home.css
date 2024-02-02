@@ -4,7 +4,7 @@ html {
   
   body {
     overflow: hidden;
-    background: #bcdee7 url("../img/bg.jpg") no-repeat center center fixed;
+    background: #173245 url("../img/bg.jpg") no-repeat center center fixed;
     background-size: cover;
     position: fixed;
     padding: 0px;
@@ -508,7 +508,7 @@ html {
     border: none;
     cursor: pointer;
     width: 100%;
-    
+    border-radius: 15px;
   }
 
   button:hover {
