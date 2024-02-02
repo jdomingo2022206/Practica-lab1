@@ -11,12 +11,12 @@ header, footer
     margin: 0 auto;
 	padding: 5em 3em;
 	text-align: center;
-    background: #555;
+    background: #173245;
 }
 
 header h1
 {
-    color: #AAA;
+    color: #bbbbbb;
     font-size: 40px;
     font-weight: lighter;
     margin-bottom: 5px;
@@ -24,7 +24,7 @@ header h1
 
 header span
 {
-    color: #222;
+    color: #aaaaaa;
 }
 
 footer span
