@@ -1,0 +1,104 @@
+body {
+    background-color: #191818;
+    font-size: 22px;
+    line-height: 32px;
+    color: #ffffff;
+    word-wrap: break-word !important;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+  }
+  
+ 
+ /*Otros*/
+
+ .otros {
+    display: grid;
+    background: rgb(23,50,69);
+    background: linear-gradient(0deg, rgba(23,50,69,1) 95%, rgba(13,140,201,1) 100%);
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+  }
+
+  .cont-otros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .card-otros {
+    cursor: pointer;
+    background-color: #2572db;
+    width: 500px;
+    height: 700px;
+    display: grid;
+    grid-template-rows: 30% 40% 30%;
+    align-items: center; /* Centra los elementos horizontalmente en las filas */
+    justify-content: center; /* Centra los elementos verticalmente en las filas */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    margin: 10px;
+    border-radius: 15px;
+  }
+  
+  /* Estilo para los elementos dentro de cada fila del grid */
+  .card-otros > * {
+    text-align: center; 
+    color: #fff; 
+    align-items: center;
+  }
+
+  .card-otros img {
+    max-width: 100%; 
+    max-height: 100%; 
+    display: block; 
+    margin: 0 auto; /* Centra la imagen horizontalmente dentro de su contenedor */
+  }
+
+  .card-otros h1{
+    font-family: 'Arial', sans-serif; 
+    color: #ffffff; 
+    font-size: 35px; 
+  } 
+
+  .card-otros h3{
+    font-family: 'Arial', sans-serif; 
+    color: #ffffff; 
+    font-size: 20px; 
+  }
+
+  .card-otros:hover {
+    transform: scale(1.1);
+  }
+
+  /* img*/
+  .img {
+    background-color: #3c464587;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: fit-content;/* Ajusta el tamaño al contenido */
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .img img {
+    max-width: 100%;/* Asegura que la imagen no sobrepase el ancho de la tarjeta */
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .cont-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 33% 33% 33%;
+  }
+
+
+  
