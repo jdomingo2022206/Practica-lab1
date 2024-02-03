@@ -64,7 +64,7 @@ function cargarDatosTable(){
     let tablePending = document.querySelector('.table-container.favorite tbody');
     tablePending.innerHTML = '';
     taskList.forEach((c) => {
-        if (c.status === false) {
+        if (c.status === true) {
             // Crea una nueva fila
             let row = tablePending.insertRow();
             // Añade celdas a la fila con los datos de taskList
@@ -94,7 +94,7 @@ function limpiarFormularioDelete() {
 }
 
 /*Start*/
-
+/*
 let table = document.querySelector('.table-container tbody');
 table.innerHTML = '';
 taskList.forEach((c) => {
@@ -113,7 +113,7 @@ taskList.forEach((c) => {
 let tablePending = document.querySelector('.table-container.favorite tbody');
 tablePending.innerHTML = '';
 taskList.forEach((c) => {
-    if (c.status === false) {
+    if (c.status === true) {
         // Crea una nueva fila
         let row = tablePending.insertRow();
         // Añade celdas a la fila con los datos de taskList
@@ -126,4 +126,57 @@ taskList.forEach((c) => {
         
         cellStatus.textContent = c.status ? 'Complete' : 'Pending';
     }
+});
+*/
+
+
+// test 
+
+let table = document.querySelector('.table-container tbody');
+table.innerHTML = '';
+taskList.forEach((c) => {
+    // Crea una nueva fila
+    let row = table.insertRow();
+    // Añade celdas a la fila con los datos de taskList
+    let cellName = row.insertCell(0);
+    let cellDesc = row.insertCell(1);
+    let cellStatus = row.insertCell(2);
+    let cellCheckbox = row.insertCell(3);
+
+    cellName.textContent = c.name;
+    cellDesc.textContent = c.desc;
+    cellStatus.textContent = c.status ? 'Complete' : 'Pending';
+
+    /*
+    let checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.checked = c.status;
+    checkbox.addEventListener('change', function () {
+        // Actualizar el estado de la tarea al cambiar el checkbox
+        taskList[index].status = checkbox.checked;
+        // Recargar la tabla
+        cargarDatosTable();
+    });
+
+    cellCheckbox.appendChild(checkbox);
+    */
+    let checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.checked = c.status;
+    checkbox.addEventListener('change', function () {
+        // Actualizar el estado de la tarea al cambiar el checkbox
+        taskList[index].status = checkbox.checked;
+    });
+
+    cellCheckbox.appendChild(checkbox);
+});
+
+checkbox.addEventListener('change', function () {
+    // Actualizar el estado de la tarea al cambiar el checkbox
+    if(checkbox.checked){
+        taskList[index].status = true;
+    }else{
+        taskList[index].status = false;
+    }
+    console.log(taskList);
 });
