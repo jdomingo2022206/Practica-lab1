@@ -52,6 +52,11 @@ div.container a
     cursor: pointer;
 }
 
+div.container.teal{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
 div.container.all h2
 {
     color: #FFF;

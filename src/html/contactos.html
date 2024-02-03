@@ -16,8 +16,8 @@
     <div class="container indigo topBotomBordersIn">
     <a href="#All">ALL</a>
     <a href="#Favorite">FAVORITE</a>
-    <a href="#New">NEW</a>
-    <a href="#Delete">DELETE</a>
+    <a href="#New-Delete">NEW</a>
+    <a href="#New-Delete">DELETE</a>
     <a href="#Contact">CONTACT</a>
     </div>
 
@@ -57,7 +57,7 @@
     </div>
     </section>
 
-    <section id="New">
+    <section id="New-Delete">
         <div class="container teal">
             <div class="form">
                 <h2>New Contact</h2>
@@ -75,30 +75,31 @@
                     <button onclick="crearContacto()">Create</button>
                 </form>
             </div>
-        </div>
-    </section>
 
-    <section id="Delete">
-    <div class="container green">
-        <div class="form">
-            <h2>Delete Contact</h2>
-            <form class="login-form">
-                <label for="name">Name:</label>
-                <input type="text" id="nameDelete" name="nameDelete" placeholder="name" required>
-                <button onclick="eliminarContacto()">Delete</button>
-            </form>
+            <div class="form">
+                <h2>Delete Contact</h2>
+                <form class="login-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="nameDelete" name="nameDelete" placeholder="name" required>
+                    <label>
+                        Wait, think about it!!!
+                        <br>
+                        <br>If you delete this contact, it will not appear again and you will have lost it forever.
+                        <br>
+                        <br>Are you sure you want to delete it?
+                        <br>
+                        <br>
+                    </label>
+                    <button onclick="eliminarContacto()">Delete</button>
+                </form>
+            </div>
         </div>
-    </div>
-    </section>
-
-    <section id="Contact">
-    <div class="container lightGreen">
-    
-    </div>
     </section>
 
     <footer>
-    <span>StyleShit (C) All rights Reserved</span>
+    <section id="Contact">
+        <span>Jonwk (C) All rights Reserved</span>
+    </section>
     </footer>
     <script src="./../js/contactos.js"></script>
 </body>
