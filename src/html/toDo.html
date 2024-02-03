@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../css/toDo.css">
+</head>
+<body>
+
+    <header>
+        <h1>Now more united than ever</h1>
+        <span>All your tasks in one place.</span>
+    </header>
+
+    <div class="container indigo topBotomBordersIn">
+    <a href="#All">ALL</a>
+    <a href="#Pending">PENDING</a>
+    <a href="#New-Delete">NEW</a>
+    <a href="#New-Delete">DELETE</a>
+    <a href="#Contact">CONTACT</a>
+    </div>
+
+    <section id="All">
+    <div class="container blue all">
+        <h2>All Tasks</h2>
+        <table class="table-container">
+            <thead>
+                <tr>
+                    <th><h1>Name</h1></th>
+                    <th><h1>Description</h1></th>
+                    <th><h1>Status</h1></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>        
+    </div>
+    </section>
+
+    <section id="Pending">
+    <div class="container cyan favorite">
+        <h2>Pending Tasks</h2>
+        <table class="table-container favorite">
+            <thead>
+                <tr>
+                    <th><h1>Name</h1></th>
+                    <th><h1>Description</h1></th>
+                    <th><h1>Status</h1></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>    
+    </div>
+    </section>
+
+    <section id="New-Delete">
+        <div class="container teal">
+            <div class="form">
+                <h2>New Task</h2>
+                <form class="login-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="name" required>
+                    <label for="desc">Description:</label>
+                    <input type="desc" id="desc" name="desc" placeholder="desc" required>
+                    <button type="submit" onclick="crearTask()">Create</button>
+                </form>
+            </div>
+
+            <div class="form">
+                <h2>Delete Task</h2>
+                <form class="login-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="nameDelete" name="nameDelete" placeholder="name" required>
+                    <label>
+                        Wait, think about it!!!
+                        <br>
+                        <br>If you delete this task, it will not appear again and you will have lost it forever.
+                        <br>
+                        <br>Are you sure you want to delete it?
+                        <br>
+                        <br>
+                    </label>
+                    <button onclick="eliminarTask()">Delete</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+    <section id="Contact">
+        <span>Jonwk (C) All rights Reserved</span>
+    </section>
+    </footer>
+
+    <script src="./../js/toDo.js"></script>
+</body>
+</html>
