@@ -3,15 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/contactos.css">
+    
     <title>Contact Page</title>
 </head>
 <body>
@@ -29,37 +22,72 @@
     </div>
 
     <section id="All">
-    <div class="container blue">
-        
+    <div class="container blue all">
+        <h2>All Contacts</h2>
+        <table class="table-container">
+            <thead>
+                <tr>
+                  <th><h1>Name</h1></th>
+                  <th><h1>Email</h1></th>
+                  <th><h1>Fax</h1></th>
+                  <th><h1>Favorite</h1></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>        
     </div>
     </section>
 
     <section id="Favorite">
-    <div class="container cyan">
-        
+    <div class="container cyan favorite">
+        <h2>Favorite Contacts</h2>
+        <table class="table-container favorite">
+            <thead>
+                <tr>
+                  <th><h1>Name</h1></th>
+                  <th><h1>Email</h1></th>
+                  <th><h1>Fax</h1></th>
+                  <th><h1>Favorite</h1></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>    
     </div>
     </section>
 
     <section id="New">
-    <div class="container teal">
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-    
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-    
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-    
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+        <div class="container teal">
+            <div class="form">
+                <h2>New Contact</h2>
+                <form class="login-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="email" required>
+                    <label for="message">Fax:</label>
+                    <input type="number" id="fax" name="fax" placeholder="fax" required>
+                    <div class="check">
+                        <label for="favoriteContact">Favorite Contact:</label>
+                        <input type="checkbox" id="favoriteContact" name="favoriteContact">
+                    </div>
+                    <button onclick="crearContacto()">Create</button>
+                </form>
+            </div>
+        </div>
     </section>
 
     <section id="Delete">
     <div class="container green">
-    
+        <div class="form">
+            <h2>Delete Contact</h2>
+            <form class="login-form">
+                <label for="name">Name:</label>
+                <input type="text" id="nameDelete" name="nameDelete" placeholder="name" required>
+                <button onclick="eliminarContacto()">Delete</button>
+            </form>
+        </div>
     </div>
     </section>
 
