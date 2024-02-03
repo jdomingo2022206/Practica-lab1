@@ -9,7 +9,7 @@
 <body>
     
     <div class="otros">
-        <section id="secNeg">
+        <section id="secToDo" onclick="goToDo()">
             <div class="cont-otros">
                 <div class="card-otros">
                     <h1>ToDo ✅</h1>
@@ -22,7 +22,7 @@
             </div>
         </section>
 
-        <section id="secTec">
+        <section id="secContacts" onclick="goContacts()">
             <div class="cont-otros">
                 <div class="card-otros">
                     <h1>Contacts 👨🏻‍👩🏻‍👧🏻‍👦🏻</h1>
@@ -36,5 +36,13 @@
         </section>
     </div>
 
+    <script>
+        function goContacts() {
+            // Acceder al frame desde el documento padre (principal)
+            const myFrame = window.parent.document.getElementById('myFrame');
+            // Cambiar el contenido del frame
+            myFrame.src = './contactos.html';
+        }
+    </script>
 </body>
 </html>

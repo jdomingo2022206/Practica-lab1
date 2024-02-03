@@ -36,7 +36,10 @@ function crearContacto() {
     let correo = document.getElementById('email').value;
     let fax = document.getElementById('fax').value;
     let favorite = document.getElementById('favoriteContact').checked;
-
+    if (nombre === '' || correo === '' || fax === '') {
+        alert('Todos los campos son obligatorios');
+        return;
+    }
     let nuevoContacto = { name: nombre, mail: correo, fax: fax, favorite: favorite};
     contacto.push(nuevoContacto);
     limpiarFormulario();
