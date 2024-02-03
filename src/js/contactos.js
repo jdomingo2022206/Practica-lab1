@@ -83,6 +83,7 @@ function cargarDatosTable(){
             cellFavorite.textContent = c.favorite ? 'Sí' : 'No';
         }
     });
+    saveData();
 }
 
 /*limpiar*/
@@ -138,3 +139,20 @@ contacto.forEach((c) => {
     }
 });
 
+/*Save Data*/
+
+function saveData() {
+    localStorage.setItem('dataContact', table.innerHTML);
+    localStorage.setItem('dataFavorite', tableFavorite.innerHTML);
+}
+
+function loadData() {
+    if (localStorage.getItem('dataContact')) {
+        table.innerHTML = localStorage.getItem('dataContact');
+    }
+    if (localStorage.getItem('dataFavorite')) {
+        tableFavorite.innerHTML = localStorage.getItem('dataFavorite');
+    }
+}
+
+loadData();

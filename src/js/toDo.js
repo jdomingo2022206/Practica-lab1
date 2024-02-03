@@ -98,6 +98,7 @@ function cargarDatosTable(){
             cellStatus.textContent = c.status ? 'Complete' : 'Pending';
         }
     });
+    saveData();
 }
 
 /*limpiar*/
@@ -152,3 +153,21 @@ taskList.forEach((c) => {
         cellStatus.textContent = c.status ? 'Complete' : 'Pending';
     }
 });
+
+/*Save Data*/
+
+function saveData() {
+    localStorage.setItem('data', table.innerHTML);
+    localStorage.setItem('dataPending', tablePending.innerHTML);
+}
+
+function loadData() {
+    if (localStorage.getItem('data')) {
+        table.innerHTML = localStorage.getItem('data');
+    }
+    if (localStorage.getItem('dataPending')) {
+        tablePending.innerHTML = localStorage.getItem('dataPending');
+    }
+}
+
+loadData();
