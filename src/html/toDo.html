@@ -58,6 +58,24 @@
 
     <section id="New-Delete">
         <div class="container teal">
+            
+            <div class="form">
+                <h2>ToDo</h2>
+                <form class="login-form">
+                    <h3>What is it?</h3>
+                    <br>
+                    <label>Welcome to your personal organization tool, your ToDo List! 
+                        Here, you can manage your daily tasks simply and effectively to make your life easier.</label>
+
+                    <br>
+                    <br>
+                    <h3>How?</h3>
+                    <br>
+                    <label>It's simple, you can create a new task, complete it or delete it. 
+                        You can also see all the tasks you have created, as well as the pending ones.</label>
+                </form>
+            </div>
+
             <div class="form">
                 <h2>New Task</h2>
                 <form class="login-form">
@@ -66,6 +84,24 @@
                     <label for="desc">Description:</label>
                     <input type="desc" id="desc" name="desc" placeholder="desc" required>
                     <button type="submit" onclick="crearTask()">Create</button>
+                </form>
+            </div>
+
+            <div class="form">
+                <h2>Complete Task</h2>
+                <form class="login-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="nameComplete" name="nameComplete" placeholder="name" required>
+                    <label>
+                        Incredible, good job!!!
+                        <br>
+                        <br>It is important that you have actually completed the task, otherwise you will become disorganized
+                        <br>
+                        <br>Keep it up!!!
+                        <br>
+                        <br>
+                    </label>
+                    <button onclick="completarTask()">Complete</button>
                 </form>
             </div>
 

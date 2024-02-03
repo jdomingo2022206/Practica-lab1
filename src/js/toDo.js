@@ -44,6 +44,26 @@ function crearTask() {
     cargarDatosTable();
 }
 
+function completarTask() {
+    let nombreCompletar = document.getElementById('nameComplete').value;
+    let tareaEncontrada = taskList.find((tarea) => tarea.name === nombreCompletar);
+
+    if (tareaEncontrada) {
+        if (!tareaEncontrada.status) {
+            tareaEncontrada.status = true;
+            alert('El task ha sido completado');
+        } else {
+            alert('El task ya estaba completado');
+        }
+    } else {
+        alert('El task no existe');
+    }
+
+    console.log(taskList);
+    limpiarFormularioComplete();
+    cargarDatosTable();
+}
+
 
 function cargarDatosTable(){
     let table = document.querySelector('.table-container tbody');
@@ -91,6 +111,11 @@ function limpiarFormulario() {
 function limpiarFormularioDelete() {
     // Restablece los valores de los campos del formulario
     document.getElementById('nameDelete').value = '';
+}
+
+function limpiarFormularioComplete() {
+    // Restablece los valores de los campos del formulario
+    document.getElementById('nameComplete').value = '';
 }
 
 /*Start*/
